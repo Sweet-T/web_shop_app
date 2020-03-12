@@ -7,7 +7,8 @@ import Cates from '../views/tabbars/Cates.vue'
 import Search from '../views/tabbars/Search.vue'
 import Cart from '../views/tabbars/Cart.vue'
 import My from '../views/tabbars/My.vue'
-
+import Goods_List from '../views/goods/Goods_List.vue'
+import Goods_Detail from '../views/goods/Goods_Detail.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -39,11 +40,23 @@ const routes = [{
     path: '/my',
     name: '我的',
     component: My
-  }]
+  }, {
+    path: '/goods_list/:goodList',
+    name: '商品列表',
+    component: Goods_List
+  }, {
+    path: '/goods_detail/:goodDetail',
+    name: '商品详情',
+    component: Goods_Detail
+  },]
 }]
 
 const router = new VueRouter({
   routes
+})
+// 重置页面滚动条位置
+router.afterEach((to, from, next) => {
+  window.scrollTo(0, 0)
 })
 
 export default router
