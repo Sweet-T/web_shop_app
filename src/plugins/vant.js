@@ -8,6 +8,7 @@ import {
     SwipeItem,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Panel,
     Icon,
     SwipeCell,
@@ -53,10 +54,19 @@ import {
     Card,
     Toast
 >>>>>>> cates
+=======
+    Lazyload,
+    Grid, 
+    GridItem,
+    Image,
+    Col, 
+    Row
+>>>>>>> home
 } from 'vant';
 
 import 'vant/lib/index.css';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Vue.use(Button);
 Vue.use(NavBar);
@@ -117,3 +127,18 @@ Vue
     .use(Card)
     .use(Toast);
 >>>>>>> cates
+=======
+Vue
+.use(Button)
+.use(NavBar)
+.use(Tabbar)
+.use(TabbarItem)
+.use(Swipe)
+.use(SwipeItem)
+.use(Lazyload)
+.use(Grid)
+.use(GridItem)
+.use(Image)
+.use(Col)
+.use(Row)
+>>>>>>> home

@@ -1,11 +1,15 @@
 <template>
   <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <van-nav-bar title="精品优购" fixed :left-arrow="this.$route.params.ifHome?false:true" :left-text="this.$route.params.ifHome?'':'返回'" @click-left="goBack"/>
 =======
     <van-nav-bar title="精品优购" fixed/>
     <div class="big"></div>
 >>>>>>> cates
+=======
+    <van-nav-bar title="狗 东"/>
+>>>>>>> home
     <!-- index 下级所有组件的路由占位符 -->
     <div class="topbar"></div>
     <router-view></router-view>

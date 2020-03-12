@@ -19,9 +19,18 @@ li {
 .van-nav-bar__title {
     color: #ffffff;
 }
+<<<<<<< HEAD
 .van-icon-arrow-left::before {
     color: #fff;
 }
 .van-nav-bar__text {
     color: #fff;
+=======
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+>>>>>>> home
 }
