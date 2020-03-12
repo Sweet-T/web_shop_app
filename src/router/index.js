@@ -7,12 +7,17 @@ import Cates from '../views/tabbars/Cates.vue'
 import Search from '../views/tabbars/Search.vue'
 import Cart from '../views/tabbars/Cart.vue'
 import My from '../views/tabbars/My.vue'
+// 导入 提交订单 列表组件
+import Order from '../views/orders/Order.vue'
+// 导入 地址列表 组件
+import Addresslist from '../views/orders/Addresslist.vue'
+// 导入 添加地址 组件
+import Address from '../views/orders/Address.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
-  component: Index,
   redirect: '/index'
 }, {
   path: '/index',
@@ -39,11 +44,27 @@ const routes = [{
     path: '/my',
     name: '我的',
     component: My
+  },{
+    path: '/order/:order',
+    name: '订单',
+    component: Order
+  },{
+    path: '/addresslist/:data',
+    name: '地址list',
+    component: Addresslist
+  },{
+    path: '/address/:data',
+    name: '地址',
+    component: Address
   }]
 }]
 
 const router = new VueRouter({
   routes
 })
-
+router.afterEach((to, from) => {
+  if(to.path == '/home') {
+    to.params.ifHome = true
+  }
+})
 export default router

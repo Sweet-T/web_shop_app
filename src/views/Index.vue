@@ -1,7 +1,8 @@
 <template>
   <div>
-    <van-nav-bar title="精品优购"/>
+    <van-nav-bar title="精品优购" fixed :left-arrow="this.$route.params.ifHome?false:true" :left-text="this.$route.params.ifHome?'':'返回'" @click-left="goBack"/>
     <!-- index 下级所有组件的路由占位符 -->
+    <div class="topbar"></div>
     <router-view></router-view>
     <van-tabbar v-model="active" active-color="#d81e06" route> 
       <van-tabbar-item to="/home">
@@ -28,7 +29,7 @@
           :src="props.active ? icon.active_search : icon.inactive_search"
         />
       </van-tabbar-item>
-      <van-tabbar-item info="3" to="/cart">
+      <van-tabbar-item :info="totalGoods" to="/cart">
         <span>购物车</span>
         <img
           slot="icon"
@@ -45,6 +46,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -62,11 +64,27 @@ export default {
         inactive_cart: "/icons/cart.png",
         active_my: "/icons/my-active.png",
         inactive_my: "/icons/my.png"
-      }
+      },
+      totalGoods: 0,
     };
-  }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    }
+  },
+  created() {
+        this.localObj = JSON.parse(window.localStorage.getItem("cartList"));
+    
+    for (const key in this.localObj) {
+      this.totalGoods++;
+    }
+  },
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+.topbar {
+  height: 46px;
+}
 </style>

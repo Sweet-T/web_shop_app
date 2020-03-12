@@ -4,3 +4,9 @@
 .van-nav-bar__title {
     color: #ffffff;
 }
+.van-icon-arrow-left::before {
+    color: #fff;
+}
+.van-nav-bar__text {
+    color: #fff;
+}
