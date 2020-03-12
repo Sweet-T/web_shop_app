@@ -55,7 +55,7 @@ export default {
     // 获取楼层导航信息
     const { data: floordata } = await this.$http.get('/home/floordata')
     this.floordata = floordata.message
-    console.log(this.floordata)
+    // console.log(this.floordata)
   },
   data() {
     return {
