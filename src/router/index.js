@@ -7,6 +7,7 @@ import Cates from '../views/tabbars/Cates.vue'
 import Search from '../views/tabbars/Search.vue'
 import Cart from '../views/tabbars/Cart.vue'
 import My from '../views/tabbars/My.vue'
+<<<<<<< HEAD
 // 导入 提交订单 列表组件
 import Order from '../views/orders/Order.vue'
 // 导入 地址列表 组件
@@ -14,6 +15,10 @@ import Addresslist from '../views/orders/Addresslist.vue'
 // 导入 添加地址 组件
 import Address from '../views/orders/Address.vue'
 
+=======
+import Goods_List from '../views/goods/Goods_List.vue'
+import Goods_Detail from '../views/goods/Goods_Detail.vue'
+>>>>>>> search
 Vue.use(VueRouter)
 
 const routes = [{
@@ -44,6 +49,7 @@ const routes = [{
     path: '/my',
     name: '我的',
     component: My
+<<<<<<< HEAD
   },{
     path: '/order/:order',
     name: '订单',
@@ -57,14 +63,33 @@ const routes = [{
     name: '地址',
     component: Address
   }]
+=======
+  }, {
+    path: '/goods_list/:goodList',
+    name: '商品列表',
+    component: Goods_List
+  }, {
+    path: '/goods_detail/:goodDetail',
+    name: '商品详情',
+    component: Goods_Detail
+  },]
+>>>>>>> search
 }]
 
 const router = new VueRouter({
   routes
 })
+<<<<<<< HEAD
 router.afterEach((to, from) => {
   if(to.path == '/home') {
     to.params.ifHome = true
   }
 })
+=======
+// 重置页面滚动条位置
+router.afterEach((to, from, next) => {
+  window.scrollTo(0, 0)
+})
+
+>>>>>>> search
 export default router
