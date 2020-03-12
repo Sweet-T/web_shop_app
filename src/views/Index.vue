@@ -1,6 +1,7 @@
 <template>
   <div>
-    <van-nav-bar title="精品优购"/>
+    <van-nav-bar title="精品优购" fixed/>
+    <div class="big"></div>
     <!-- index 下级所有组件的路由占位符 -->
     <router-view></router-view>
     <van-tabbar v-model="active" active-color="#d81e06" route> 
@@ -68,5 +69,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+.big{
+  height: 46px;
+
+}
 </style>

@@ -5,14 +5,25 @@ import {
     Tabbar,
     TabbarItem,
     Swipe,
-    SwipeItem
+    SwipeItem,
+    TreeSelect,
+    Grid,
+    GridItem,
+    Card,
+    Toast
 } from 'vant';
 
 import 'vant/lib/index.css';
 
-Vue.use(Button);
-Vue.use(NavBar);
-Vue.use(Tabbar);
-Vue.use(TabbarItem);
-Vue.use(Swipe);
-Vue.use(SwipeItem);
+Vue
+    .use(Button)
+    .use(NavBar)
+    .use(Tabbar)
+    .use(TabbarItem)
+    .use(Swipe)
+    .use(SwipeItem)
+    .use(TreeSelect)
+    .use(Grid)
+    .use(GridItem)
+    .use(Card)
+    .use(Toast);
