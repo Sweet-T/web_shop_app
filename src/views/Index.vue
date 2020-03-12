@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="精品优购"/>
+    <van-nav-bar title="狗 东"/>
     <!-- index 下级所有组件的路由占位符 -->
     <router-view></router-view>
     <van-tabbar v-model="active" active-color="#d81e06" route> 
