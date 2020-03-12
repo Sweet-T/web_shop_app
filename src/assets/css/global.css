@@ -1,6 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
 .van-nav-bar {
     background-color: #d81e06;
 }
+
 .van-nav-bar__title {
     color: #ffffff;
 }

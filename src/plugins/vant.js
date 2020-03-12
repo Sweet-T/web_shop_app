@@ -7,6 +7,7 @@ import {
     Swipe,
     SwipeItem,
 <<<<<<< HEAD
+<<<<<<< HEAD
     Panel,
     Icon,
     SwipeCell,
@@ -45,10 +46,18 @@ import {
     Tabs,
     CellGroup,
 >>>>>>> search
+=======
+    TreeSelect,
+    Grid,
+    GridItem,
+    Card,
+    Toast
+>>>>>>> cates
 } from 'vant';
 
 import 'vant/lib/index.css';
 
+<<<<<<< HEAD
 Vue.use(Button);
 Vue.use(NavBar);
 Vue.use(Tabbar);
@@ -94,3 +103,17 @@ Vue.use(Tab)
 Vue.use(Tabs)
 Vue.use(CellGroup)
 >>>>>>> search
+=======
+Vue
+    .use(Button)
+    .use(NavBar)
+    .use(Tabbar)
+    .use(TabbarItem)
+    .use(Swipe)
+    .use(SwipeItem)
+    .use(TreeSelect)
+    .use(Grid)
+    .use(GridItem)
+    .use(Card)
+    .use(Toast);
+>>>>>>> cates
