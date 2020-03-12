@@ -1,6 +1,8 @@
 <template>
   <div>
+    <!-- 删除按钮需完善 -->
     <van-address-edit
+      ref="editForm"
       :area-list="areaList"
       show-postal
       show-delete
@@ -24,7 +26,7 @@ export default {
       searchResult: [],
       localAddress: [],
       savedLocal: {},
-      editAddress: {}
+      editAddress: {},
     };
   },
   methods: {
@@ -52,10 +54,16 @@ export default {
         "addresses",
         JSON.stringify(this.localAddress)
       );
-      this.$router.push("/addresslist");
+      this.$router.push(`/addresslist/${JSON.stringify(this.savedLocal)}`);
     },
-    onDelete() {
-      Toast("delete");
+    onDelete(content) {
+      // this.localAddress = this.localAddress.splice(this.editAddress.id)
+      // console.log(this.editAddress)
+      // window.localStorage.setItem(
+      //   "addresses",
+      //   JSON.stringify(this.localAddress)
+      // );
+      // this.$router.push(`/addresslist/${JSON.stringify(this.savedLocal)}`);
     }
   },
   created() {

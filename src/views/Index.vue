@@ -1,17 +1,8 @@
 <template>
   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <van-nav-bar title="精品优购" fixed :left-arrow="this.$route.params.ifHome?false:true" :left-text="this.$route.params.ifHome?'':'返回'" @click-left="goBack"/>
-=======
-    <van-nav-bar title="精品优购" fixed/>
-    <div class="big"></div>
->>>>>>> cates
-=======
-    <van-nav-bar title="狗 东"/>
->>>>>>> home
-    <!-- index 下级所有组件的路由占位符 -->
     <div class="topbar"></div>
+    <!-- index 下级所有组件的路由占位符 -->
     <router-view></router-view>
     <van-tabbar v-model="active" active-color="#d81e06" route> 
       <van-tabbar-item to="/home">
@@ -93,13 +84,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-<<<<<<< HEAD
 .topbar {
   height: 46px;
-=======
-.big{
-  height: 46px;
-
->>>>>>> cates
 }
 </style>

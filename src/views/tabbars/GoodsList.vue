@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-card :num="total" :price="good_price" :title="good_name" :thumb="good_small_logo"/>
+    <van-card :num="total" :price="good_price" :title="good_name" :thumb="good_small_logo" @click="goDetails(good_id)"/>
     <div class="kongbai">
       <span>❤小主，没有更多咯❤</span>
     </div>
@@ -19,7 +19,8 @@ export default {
       total: 0,
       good_price: 0,
       good_name: "",
-      good_small_logo: ""
+      good_small_logo: "",
+      good_id: 0
     };
   },
   created() {
@@ -48,9 +49,13 @@ export default {
         this.good_price = item.goods_price;
         this.good_name = item.goods_name;
         this.good_small_logo = item.goods_small_logo;
+        this.good_id = item.goods_id
       });
       }
     },
+    goDetails(id) {
+      this.$router.push(`/goods_detail/${id}`)
+    }
   }
 };
 </script>

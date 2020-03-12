@@ -6,9 +6,6 @@ import {
     TabbarItem,
     Swipe,
     SwipeItem,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     Panel,
     Icon,
     SwipeCell,
@@ -25,16 +22,7 @@ import {
     AddressEdit,
     Toast,
     AddressList,
-=======
     Search,
-    Row,
-    Col,
-    List,
-    Cell,
-    Icon,
-    SwipeCell,
-    Card,
-    Toast,
     Tag,
     ImagePreview,
     CouponCell,
@@ -46,35 +34,21 @@ import {
     Tab,
     Tabs,
     CellGroup,
->>>>>>> search
-=======
     TreeSelect,
-    Grid,
     GridItem,
-    Card,
-    Toast
->>>>>>> cates
-=======
     Lazyload,
     Grid, 
-    GridItem,
     Image,
-    Col, 
-    Row
->>>>>>> home
 } from 'vant';
 
 import 'vant/lib/index.css';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Vue.use(Button);
 Vue.use(NavBar);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
 Vue.use(Swipe);
 Vue.use(SwipeItem);
-<<<<<<< HEAD
 Vue.use(Panel);
 Vue.use(Icon);
 Vue.use(SwipeCell);
@@ -91,7 +65,6 @@ Vue.use(Cell);
 Vue.use(AddressEdit);
 Vue.use(Toast);
 Vue.use(AddressList);
-=======
 Vue.use(Search)
 Vue.use(Row)
 Vue.use(Col)
@@ -112,8 +85,7 @@ Vue.use(GoodsActionButton)
 Vue.use(Tab)
 Vue.use(Tabs)
 Vue.use(CellGroup)
->>>>>>> search
-=======
+
 Vue
     .use(Button)
     .use(NavBar)
@@ -126,8 +98,7 @@ Vue
     .use(GridItem)
     .use(Card)
     .use(Toast);
->>>>>>> cates
-=======
+
 Vue
 .use(Button)
 .use(NavBar)
@@ -141,4 +112,4 @@ Vue
 .use(Image)
 .use(Col)
 .use(Row)
->>>>>>> home
+

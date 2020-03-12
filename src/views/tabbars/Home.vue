@@ -3,53 +3,36 @@
     <!-- 轮播图区域 -->
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
       <van-swipe-item v-for="(image, index) in images" :key="index">
+        <!-- 轮播图地址拼接 -->
+        <router-link :to="'/goods_detail/'+image.navigator_url.split('=')[1]">
         <img :src="image.image_src" class="lunbo" />
+        </router-link>
       </van-swipe-item>
     </van-swipe>
     <!-- 分类导航区域 -->
     <van-grid type="flex">
       <van-grid-item justify="space-around" v-for="(item,i) in catitems" :key="i" class="fenleiLi">
-        <a href="javascript:;">
+        <router-link to="/cates">
           <van-image :src="item.image_src"></van-image>
-        </a>
+        </router-link>
       </van-grid-item>
     </van-grid>
     <!-- 楼层导航区域 -->
     <div>
       <div class="yige" v-for="(item,i) in floordata" :key="i">
+       
         <van-image :src="item.floor_title.image_src"></van-image>
+       
         <van-row class="floorImgs">
           <van-col span="8" v-for="(a, j) in item.product_list" :key="j">
+             <router-link :to="'/goods_list/'+item.product_list[j].navigator_url.split('=')[1]">
             <van-image
               :src="item.product_list[j].image_src"
               :width="item.product_list[j].image_src/2"
               cover
             ></van-image>
+             </router-link>
           </van-col>
-          <!-- <van-col span="8">
-            <van-image
-              :src="item.product_list[1].image_src"
-              :width="item.product_list[1].image_src/2"
-            ></van-image>
-          </van-col>
-          <van-col span="8">
-            <van-image
-              :src="item.product_list[3].image_src"
-              :width="item.product_list[3].image_src/2"
-            ></van-image>
-          </van-col>
-          <van-col span="8">
-            <van-image
-              :src="item.product_list[2].image_src"
-              :width="item.product_list[2].image_src/2"
-            ></van-image>
-          </van-col>
-          <van-col span="8">
-            <van-image
-              :src="item.product_list[4].image_src"
-              :width="item.product_list[4].image_src/2"
-            ></van-image>
-          </van-col> -->
         </van-row>
       </div>
     </div>

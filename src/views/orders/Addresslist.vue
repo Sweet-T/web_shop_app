@@ -5,8 +5,8 @@
       :list="localAddress"
       default-tag-text="默认"
       @add="onAdd"
-      @edit="onEdit"
-      @click-item="chooseAddress"
+      @edit.self="onEdit"
+      @select.self="chooseAddress"
     />
   </div>
 </template>
@@ -26,16 +26,12 @@ export default {
       this.$router.push('/address/{}')
     },
     // 当点击编辑按钮时
-    onEdit(item, index) {
+    onEdit(item,index) {
       console.dir(item)
-      console.dir(index)
       if(!item) {
         item = {};
       }
       item.id = index;
-      if(!item) {
-        item = {};
-      }
       this.$router.push(`/address/${JSON.stringify(item)}`)
     },
     // 当选中地址时
