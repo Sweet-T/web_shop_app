@@ -69,7 +69,7 @@ export default {
 
         this.search_goodslist = res.message.goods;
         // this.$store.commit("searchList", this.search_goodslist);
-        this.$router.push(`/goods_list/${this.search_searchContent}`);
+        this.$router.push(`/goods_list?querywords=${this.search_searchContent}`);
       } else {
         //输入框不为空时
         this.getGoodsList();
@@ -110,7 +110,7 @@ export default {
       console.dir(res.message.goods);
       this.search_goodslist = res.message.goods;
       // this.$store.commit("searchList", this.search_goodslist);
-      this.$router.push(`/goods_list/${this.search_searchContent}`);
+      this.$router.push(`/goods_list?querywords=${this.search_searchContent}`);
       // console.log(this.search_goodslist);
     },
     // 点击取消时触发

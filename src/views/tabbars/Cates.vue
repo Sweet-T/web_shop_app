@@ -15,7 +15,7 @@
                 :key="i"
                 :icon="item2.cat_icon"
                 :text="item2.cat_name"
-                :to="{path:'goods_lists',query:{cid:item2.cat_id}}"
+                :to="{path:'goods_list',query: {cid:item2.cat_id}}"
               ></van-grid-item>
             </van-grid>
           </li>

@@ -62,21 +62,13 @@ const routes = [{
     name: '地址',
     component: Address
   }, {
-    path: '/goods_list/:goodList',
+    path: '/goods_list',
     name: '商品列表',
     component: Goods_List
   }, {
     path: '/goods_detail/:goodDetail',
     name: '商品详情',
     component: Goods_Detail
-  }, {
-    path: '/goods_lists',
-    name: '商品列表s',
-    component: GoodsList
-  }, {
-    path: '/goods_list/null',
-    name: '零商品列表',
-    component: GoodsListNull
   }]
 }]
 const router = new VueRouter({
